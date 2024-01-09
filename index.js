@@ -37,13 +37,13 @@ app.get('*/$|/index(.html)?', (req,res,next)=>{
     console.log("Index file rendered.");
 });
 
-app.get('/about(.html)?', (req,res)=>{
-    res.sendFile(path.join(__dirname,'views','about.html'));
-});
+// app.get('/about(.html)?', (req,res)=>{
+//     res.sendFile(path.join(__dirname,'views','about.html'));
+// });
 
-app.get('/About(.html)?',(req,res)=>{
-    res.redirect(301,'/about.html');
-});
+// app.get('/About(.html)?',(req,res)=>{
+//     res.redirect(301,'/about.html');
+// });
 
 app.all('*', (req,res)=>{
     res.status(404);
